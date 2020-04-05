@@ -397,6 +397,8 @@ Error message and password prompt
 
 <li>About Me</li>
 
+<li>Backlinks template</li>
+
 <li>pc</li>
 
 <li>setup</li>
@@ -9698,10 +9700,10 @@ Error message and password prompt
 <div created="20200405182256797" modified="20200405182258258" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20200405100417665" modified="20200405182227133" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/More</pre>
+<div created="20200405100417665" modified="20200405184549650" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
-<div list="$:/ControlPanel" title="$:/StoryList">
+<div created="20200405184609024" list="[[Backlinks template]]" modified="20200405184609024" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10639,6 +10641,13 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 You may want to read about my:
 
 * [[setup]]</pre>
+</div>
+<div created="20200405184900693" modified="20200405185001766" tags="$:/tags/ViewTemplate" title="Backlinks template">
+<pre>&lt;$list filter='[is[current]backlinks[]limit[1]]' variable=dummy&gt;
+&lt;hr&gt;
+Backlinks: &lt;$list filter='[&lt;currentTiddler&gt;backlinks[]butlast[]]'&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;,&lt;/$list&gt;
+&lt;$list filter='[&lt;currentTiddler&gt;backlinks[]last[]]'&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/$list&gt;
+&lt;/$list&gt;</pre>
 </div>
 <div created="20200405182415980" modified="20200405183450176" tags="setup pc" title="pc">
 <pre>My desktop computer is currently configure in dual boot with:
