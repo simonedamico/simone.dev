@@ -141,6 +141,8 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>$:/backlinks template</li>
+
 <li>$:/config/AutoSave</li>
 
 <li>$:/config/MissingLinks</li>
@@ -415,8 +417,6 @@ Error message and password prompt
 
 <li>architecture</li>
 
-<li>backlinks template</li>
-
 <li>beta reduction</li>
 
 <li>bitwarden</li>
@@ -453,6 +453,13 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
+<div created="20200405184900693" modified="20200411131939427" tags="$:/tags/ViewTemplate" title="$:/backlinks template">
+<pre>&lt;$list filter='[is[current]backlinks[]limit[1]]' variable=dummy&gt;
+&lt;hr&gt;
+Backlinks: &lt;$list filter='[&lt;currentTiddler&gt;backlinks[]butlast[]]'&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;,&lt;/$list&gt;
+&lt;$list filter='[&lt;currentTiddler&gt;backlinks[]last[]]'&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/$list&gt;
+&lt;/$list&gt;</pre>
+</div>
 <div created="20200411124121188" modified="20200411124121188" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
@@ -9764,7 +9771,7 @@ Error message and password prompt
 <div created="20200411125306965" modified="20200411125307974" title="$:/state/tree/$:/GitHub/">
 <pre>hide</pre>
 </div>
-<div created="20200411124949120" list="setup [[mouse-less environment]] pc nixos" modified="20200411131557016" title="$:/StoryList">
+<div created="20200411124949120" list="[[$:/backlinks template]] [[about me]] setup" modified="20200411131945562" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10581,8 +10588,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200405175432864" dependents="" description="Basic theme" modified="20200405175432864" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" server-url="https://tiddlywiki.com/library/v5.1.21/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.21/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.21">
 <pre></pre>
 </div>
-<div created="20200405175342169" modified="20200411131555032" title="$:/temp/search">
-<pre>set</pre>
+<div created="20200405175342169" modified="20200411131657928" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200405175432852" modified="20200405175432852" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html" url="https://tiddlywiki.com/library/v5.1.21/index.html">
 <pre>loaded</pre>
@@ -10721,13 +10728,6 @@ The name of the variables is not semantically meaningful, therefore all the foll
 </div>
 <div created="20200411123533887" modified="20200411123604845" tags="architecture" title="architecture">
 <pre>soon</pre>
-</div>
-<div created="20200405184900693" modified="20200408103155216" tags="$:/tags/ViewTemplate" title="backlinks template">
-<pre>&lt;$list filter='[is[current]backlinks[]limit[1]]' variable=dummy&gt;
-&lt;hr&gt;
-Backlinks: &lt;$list filter='[&lt;currentTiddler&gt;backlinks[]butlast[]]'&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;,&lt;/$list&gt;
-&lt;$list filter='[&lt;currentTiddler&gt;backlinks[]last[]]'&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/$list&gt;
-&lt;/$list&gt;</pre>
 </div>
 <div created="20200411121335643" modified="20200411122012936" tags="[[lambda calculus]]" title="beta reduction">
 <pre>Beta reduction is the process of eliminating the head of an abstraction through the application of the function. Example: 
