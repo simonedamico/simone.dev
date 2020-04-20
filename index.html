@@ -433,6 +433,8 @@ Error message and password prompt
 
 <li>currying</li>
 
+<li>Draft of 'semigroup'</li>
+
 <li>entertaining websites</li>
 
 <li>lambda calculus</li>
@@ -9861,7 +9863,7 @@ Backlinks: &lt;$list filter='[&lt;currentTiddler&gt;backlinks[]butlast[]]'&gt;&l
 <div created="20200411125306965" modified="20200411125307974" title="$:/state/tree/$:/GitHub/">
 <pre>hide</pre>
 </div>
-<div created="20200420192548734" list="$:/ControlPanel monoid semigroup [[about me]] [[lambda calculus]]" modified="20200420194738321" title="$:/StoryList">
+<div created="20200420192548734" list="monoid [[Draft of 'semigroup']] [[about me]] [[lambda calculus]]" modified="20200420194738321" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10849,6 +10851,19 @@ z
 
 So λxy.xy is a shorthand for λx.(λy.xy)</pre>
 </div>
+<div created="20200420192701266" draft.of="semigroup" draft.title="semigroup" modified="20200420194944566" tags="algebra haskell [[functional programming]]" title="Draft of 'semigroup'">
+<pre>A semigroup is a set that is closed under an associative binary operation and nothing else.
+
+
+```haskell
+class Semigroup a where
+  (&lt;&gt;) :: a -&gt; a -&gt; a
+
+-- A valid semigroup obeys to associative law:
+(a &lt;&gt; b) &lt;&gt; c == a &lt;&gt; (b &lt;&gt; c)
+```
+</pre>
+</div>
 <div created="20200411114528431" modified="20200411114937330" tags="bookmarks fun" title="entertaining websites">
 <pre>* https://sandspiel.club it's a literal sandbox game that run in the browser with pixel simulation of different materials</pre>
 </div>
@@ -10882,10 +10897,10 @@ Read about:
 * [[combinators]]
 </pre>
 </div>
-<div created="20200420193519285" modified="20200420194657120" tags="haskell [[functional programming]] algebra" title="monoid">
+<div created="20200420193519285" modified="20200420194919610" tags="haskell [[functional programming]] algebra" title="monoid">
 <pre>A monoid is a set that is closed under an associative binary operation and has an identity element. 
 
-```
+```haskell
 class Semigroup m =&gt; Monoid m where
   mempty :: m
   mappend :: m -&gt; m -&gt; m
@@ -10893,7 +10908,7 @@ class Semigroup m =&gt; Monoid m where
   mconcat :: [m] -&gt; m
   mconcat = foldr mappend mempty
 
-A valid monoid obeys to the associative law and the left and right identity laws:
+-- A valid monoid obeys to the associative law and the left and right identity laws:
 (a &lt;&gt; b) &lt;&gt; c == a &lt;&gt; (b &lt;&gt; c)
 (mempty &lt;&gt; a) == a
 (a &lt;&gt; mempty) == a
