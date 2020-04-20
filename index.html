@@ -439,6 +439,8 @@ Error message and password prompt
 
 <li>qutebrowser</li>
 
+<li>semigroup</li>
+
 <li>setup</li>
 
 <li>ssh alternative</li>
@@ -9773,7 +9775,7 @@ Backlinks: &lt;$list filter='[&lt;currentTiddler&gt;backlinks[]butlast[]]'&gt;&l
 <div created="20200411125306965" modified="20200411125307974" title="$:/state/tree/$:/GitHub/">
 <pre>hide</pre>
 </div>
-<div created="20200411132358887" list="[[about me]] setup xmonad [[mouse-less environment]]" modified="20200411133521579" title="$:/StoryList">
+<div created="20200420192548734" list="semigroup [[about me]] [[lambda calculus]]" modified="20200420192548734" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10823,6 +10825,19 @@ Useful bindings:
 * `L` forward in history
 * `J` previous tab
 * `K` next tab 
+</pre>
+</div>
+<div created="20200420192701266" modified="20200420193041309" tags="algebra haskell [[functional programming]]" title="semigroup">
+<pre>A semigroup is a set that is closed under an associative binary operation and nothing else.
+
+
+```
+class Semigroup a where
+  (&lt;&gt;) :: a -&gt; a -&gt; a
+
+Obeys to associative law:
+(a &lt;&gt; b) &lt;&gt; c == a &lt;&gt; (b &lt;&gt; c)
+```
 </pre>
 </div>
 <div created="20200405181619452" modified="20200411133516291" tags="setup" title="setup">
