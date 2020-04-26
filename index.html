@@ -9881,7 +9881,7 @@ journal</pre>
 <div created="20200411125306965" modified="20200411125307974" title="$:/state/tree/$:/GitHub/">
 <pre>hide</pre>
 </div>
-<div created="20200426081927849" list="spacemacs architecture functor haskell [[lambda calculus]] semigroup monoid [[about me]] journal" modified="20200426084456847" title="$:/StoryList">
+<div created="20200426100134087" list="functor [[about me]] journal" modified="20200426100134087" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10884,12 +10884,13 @@ So λxy.xy is a shorthand for λx.(λy.xy)</pre>
 <div created="20200411114528431" modified="20200411114937330" tags="bookmarks fun" title="entertaining websites">
 <pre>* https://sandspiel.club it's a literal sandbox game that run in the browser with pixel simulation of different materials</pre>
 </div>
-<div created="20200426082350151" modified="20200426083745122" tags="[[functional programming]] haskell" title="functor">
+<div created="20200426082350151" modified="20200426100658439" tags="[[functional programming]] haskell" title="functor">
 <pre>Functor is a mapping between categories. It generalize `map`, taking a function and lifting it into a different type.
 
 ```haskell
 f :: a -&gt; b
 fmap f :: f a -&gt; f b
+(&lt;$&gt;) :: Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 ```
 
 Functor must abide to two laws: identity and composition.
