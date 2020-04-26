@@ -441,6 +441,8 @@ Error message and password prompt
 
 <li>entertaining websites</li>
 
+<li>functor</li>
+
 <li>haskell</li>
 
 <li>journal</li>
@@ -9862,8 +9864,8 @@ journal</pre>
 <div created="20200411125312857" modified="20200411125313668" title="$:/state/tab-1163638994">
 <pre>$:/core/ui/MoreSideBar/Plugins/Languages</pre>
 </div>
-<div created="20200405095219113" modified="20200425213339125" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Info</pre>
+<div created="20200405095219113" modified="20200426082317732" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Settings</pre>
 </div>
 <div created="20200405095355041" modified="20200425212207659" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -9877,7 +9879,7 @@ journal</pre>
 <div created="20200411125306965" modified="20200411125307974" title="$:/state/tree/$:/GitHub/">
 <pre>hide</pre>
 </div>
-<div created="20200426081927849" list="haskell [[lambda calculus]] semigroup monoid [[about me]] journal" modified="20200426082121816" title="$:/StoryList">
+<div created="20200426081927849" list="functor haskell [[lambda calculus]] semigroup monoid [[about me]] journal" modified="20200426082308515" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10876,11 +10878,32 @@ So λxy.xy is a shorthand for λx.(λy.xy)</pre>
 <div created="20200411114528431" modified="20200411114937330" tags="bookmarks fun" title="entertaining websites">
 <pre>* https://sandspiel.club it's a literal sandbox game that run in the browser with pixel simulation of different materials</pre>
 </div>
-<div created="20200426082141121" modified="20200426082242542" tags="" title="haskell">
+<div created="20200426082350151" modified="20200426083745122" tags="[[functional programming]] haskell" title="functor">
+<pre>Functor is a mapping between categories. It generalize `map`, taking a function and lifting it into a different type.
+
+```haskell
+f :: a -&gt; b
+fmap f :: f a -&gt; f b
+```
+
+Functor must abide to two laws: identity and composition.
+
+```haskell
+fmap id == id
+fmap (f . g) == fmap f . fmap g
+```
+
+Both of these laws express the fact the functor must preserve the structure of the type they are operating on.</pre>
+</div>
+<div created="20200426082141121" modified="20200426083820628" tags="[[functional programming]]" title="haskell">
 <pre>Useful algebras:
 
 * [[semigroup]]
-* [[monoid]]</pre>
+* [[monoid]]
+
+Useful generalizations: 
+
+* [[functor]]</pre>
 </div>
 <div created="20200425213428777" modified="20200425213432664" title="journal">
 <pre>[[2020-04-25 There is nothing wrong with being wrong]]</pre>
